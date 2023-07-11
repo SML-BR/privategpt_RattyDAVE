@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM nvidia/cuda:12.1.1-runtime-ubuntu22.04
 
 EXPOSE 3000 5000
 
@@ -8,7 +8,7 @@ RUN     apt update && \
         apt install -y git nodejs python3 build-essential python3-dev supervisor pandoc && \
         curl https://bootstrap.pypa.io/get-pip.py | python3  && \
         cd /root  && \
-        git clone https://github.com/SamurAIGPT/privateGPT.git  && \
+        git clone https://github.com/SML-BR/privateGPT_Ninja.git  && \
         cd /root/privateGPT/client && \
         npm install  && \
         cd /root/privateGPT/server && \
