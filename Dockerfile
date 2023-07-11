@@ -8,8 +8,8 @@ RUN     apt update && \
         apt install -y git nodejs python3 build-essential python3-dev supervisor pandoc && \
         curl https://bootstrap.pypa.io/get-pip.py | python3  && \
         cd /root  && \
-        git clone https://github.com/SML-BR/privateGPT_Ninja.git  && \
-        cd /root/privateGPT/client && \
+ #       git clone https://github.com/SML-BR/privateGPT_Ninja.git  && \
+        cd /mnt/c/cmd/LLM/privateGPT_Ninja/client && \
         npm install  && \
         cd /root/privateGPT/server && \
         pip3 install --no-cache-dir -r requirements.txt && \
